@@ -7,308 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --bg:       #fafaf9;
-      --white:    #ffffff;
-      --ink:      #111110;
-      --ink2:     #3c3b38;
-      --muted:    #79776f;
-      --line:     #e4e2dd;
-      --tag-bg:   #eeece9;
-      --tag-ink:  #52504c;
-      --green:    #1d6f3b;
-      --green-bg: #edf7f1;
-      --blue:     #1a4fa0;
-      --blue-bg:  #edf2fb;
-    }
-    html { scroll-behavior: smooth; }
-    body {
-      background: var(--bg);
-      color: var(--ink);
-      font-family: 'Inter', sans-serif;
-      font-size: 14px;
-      line-height: 1.65;
-      -webkit-font-smoothing: antialiased;
-    }
-    a { color: inherit; text-decoration: none; }
-
-    /* ── PAGE SHELL ── */
-    .page {
-      max-width: 820px;
-      margin: 3rem auto 6rem;
-      background: var(--white);
-      border: 1px solid var(--line);
-      border-radius: 4px;
-      overflow: hidden;
-    }
-
-    /* ── HEADER ── */
-    .cv-header {
-      padding: 2.8rem 3rem 2.2rem;
-      border-bottom: 2px solid var(--ink);
-    }
-    .cv-name {
-      font-size: 2.2rem;
-      font-weight: 700;
-      letter-spacing: -.04em;
-      color: var(--ink);
-      line-height: 1;
-    }
-    .cv-title {
-      font-size: .95rem;
-      font-weight: 400;
-      color: var(--muted);
-      margin-top: .4rem;
-      letter-spacing: .01em;
-    }
-    .cv-meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: .4rem 1.6rem;
-      margin-top: 1.4rem;
-    }
-    .cv-meta a, .cv-meta span {
-      font-size: .8rem;
-      color: var(--muted);
-      display: flex;
-      align-items: center;
-      gap: .3rem;
-      transition: color .15s;
-    }
-    .cv-meta a:hover { color: var(--ink); }
-    .cv-meta .ico { font-size: .85rem; }
-    .badge-remote {
-      display: inline-flex;
-      align-items: center;
-      gap: .35rem;
-      background: var(--green-bg);
-      color: var(--green);
-      border: 1px solid rgba(29,111,59,.2);
-      font-size: .72rem;
-      font-weight: 600;
-      padding: .2rem .65rem;
-      border-radius: 3px;
-      margin-top: 1rem;
-    }
-    .badge-dot { width: 6px; height: 6px; background: var(--green); border-radius: 50%; }
-
-    /* ── BODY LAYOUT ── */
-    .cv-body {
-      display: grid;
-      grid-template-columns: 1fr 260px;
-    }
-
-    /* ── MAIN COLUMN ── */
-    .cv-main { padding: 2.4rem 3rem; border-right: 1px solid var(--line); }
-
-    /* ── SIDEBAR ── */
-    .cv-side { padding: 2.4rem 2rem; background: var(--bg); }
-
-    /* ── SECTION ── */
-    .cv-section { margin-bottom: 2.4rem; }
-    .cv-section:last-child { margin-bottom: 0; }
-    .section-label {
-      font-size: .65rem;
-      font-weight: 700;
-      letter-spacing: .14em;
-      text-transform: uppercase;
-      color: var(--muted);
-      padding-bottom: .6rem;
-      border-bottom: 1px solid var(--line);
-      margin-bottom: 1.4rem;
-    }
-
-    /* ── SUMMARY ── */
-    .summary {
-      font-size: .9rem;
-      color: var(--ink2);
-      line-height: 1.8;
-    }
-    .summary strong { color: var(--ink); font-weight: 600; }
-
-    /* ── EXPERIENCE ── */
-    .exp-item { margin-bottom: 1.6rem; }
-    .exp-item:last-child { margin-bottom: 0; }
-    .exp-top {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 1rem;
-    }
-    .exp-role {
-      font-size: .9rem;
-      font-weight: 600;
-      color: var(--ink);
-    }
-    .exp-period {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: .72rem;
-      color: var(--muted);
-      white-space: nowrap;
-      margin-top: .1rem;
-    }
-    .exp-company {
-      font-size: .82rem;
-      color: var(--muted);
-      margin-top: .15rem;
-    }
-    .exp-company strong { color: var(--ink2); font-weight: 500; }
-    .exp-bullets {
-      margin-top: .7rem;
-      padding-left: 1rem;
-      display: flex;
-      flex-direction: column;
-      gap: .35rem;
-    }
-    .exp-bullets li {
-      font-size: .85rem;
-      color: var(--ink2);
-      line-height: 1.6;
-    }
-    .exp-bullets li::marker { color: var(--muted); }
-
-    /* ── PROJECTS ── */
-    .proj-item {
-      margin-bottom: 1.5rem;
-      padding-bottom: 1.5rem;
-      border-bottom: 1px solid var(--line);
-    }
-    .proj-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
-    .proj-top {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 1rem;
-    }
-    .proj-name {
-      font-size: .9rem;
-      font-weight: 600;
-      color: var(--ink);
-    }
-    .proj-status {
-      font-size: .65rem;
-      font-weight: 600;
-      letter-spacing: .06em;
-      text-transform: uppercase;
-      padding: .18rem .5rem;
-      border-radius: 3px;
-      white-space: nowrap;
-    }
-    .s-active  { background: var(--green-bg);  color: var(--green); }
-    .s-prod    { background: var(--blue-bg);    color: var(--blue);  }
-    .s-dev     { background: #fdf4e7; color: #8a5e00; }
-    .proj-desc {
-      font-size: .84rem;
-      color: var(--ink2);
-      margin-top: .4rem;
-      line-height: 1.65;
-    }
-    .proj-award {
-      font-size: .78rem;
-      color: var(--green);
-      font-weight: 500;
-      margin-top: .4rem;
-    }
-    .proj-stack {
-      display: flex;
-      flex-wrap: wrap;
-      gap: .3rem;
-      margin-top: .65rem;
-    }
-    .tech {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: .7rem;
-      background: var(--tag-bg);
-      color: var(--tag-ink);
-      padding: .15rem .45rem;
-      border-radius: 3px;
-    }
-    .proj-link {
-      font-size: .78rem;
-      color: var(--blue);
-      font-weight: 500;
-      margin-top: .5rem;
-      display: inline-block;
-    }
-    .proj-link:hover { text-decoration: underline; }
-
-    /* ── SIDEBAR SECTIONS ── */
-    .side-section { margin-bottom: 2rem; }
-    .side-section:last-child { margin-bottom: 0; }
-
-    /* ── SKILLS ── */
-    .skill-group { margin-bottom: 1.2rem; }
-    .skill-group:last-child { margin-bottom: 0; }
-    .skill-group-label {
-      font-size: .7rem;
-      font-weight: 600;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: .5rem;
-    }
-    .skill-tags { display: flex; flex-wrap: wrap; gap: .3rem; }
-    .stag {
-      font-size: .78rem;
-      background: var(--tag-bg);
-      color: var(--tag-ink);
-      padding: .2rem .55rem;
-      border-radius: 3px;
-    }
-    .stag.highlight {
-      background: var(--ink);
-      color: var(--white);
-    }
-
-    /* ── EDUCATION ── */
-    .edu-item { margin-bottom: 1rem; }
-    .edu-item:last-child { margin-bottom: 0; }
-    .edu-degree { font-size: .87rem; font-weight: 600; color: var(--ink); }
-    .edu-school { font-size: .8rem; color: var(--muted); margin-top: .15rem; }
-    .edu-period { font-family: 'JetBrains Mono', monospace; font-size: .72rem; color: var(--muted); margin-top: .1rem; }
-
-    /* ── ACHIEVEMENTS ── */
-    .ach-item {
-      display: flex;
-      gap: .65rem;
-      margin-bottom: .85rem;
-      align-items: flex-start;
-    }
-    .ach-item:last-child { margin-bottom: 0; }
-    .ach-icon { font-size: .9rem; line-height: 1.5; flex-shrink: 0; }
-    .ach-text { font-size: .82rem; color: var(--ink2); line-height: 1.55; }
-    .ach-text strong { color: var(--ink); font-weight: 600; }
-
-    /* ── LANGUAGES ── */
-    .lang-item { display: flex; justify-content: space-between; align-items: center; margin-bottom: .5rem; font-size: .82rem; }
-    .lang-name { color: var(--ink2); font-weight: 500; }
-    .lang-level { color: var(--muted); font-size: .78rem; }
-
-    /* ── CONTACT SIDEBAR ── */
-    .contact-item { font-size: .8rem; color: var(--ink2); margin-bottom: .55rem; display: flex; gap: .5rem; align-items: flex-start; }
-    .contact-item .ico { color: var(--muted); flex-shrink: 0; font-size: .85rem; }
-    .contact-item a { color: var(--blue); }
-    .contact-item a:hover { text-decoration: underline; }
-
-    /* ── PRINT ── */
-    @media print {
-      body { background: white; }
-      .page { margin: 0; border: none; border-radius: 0; box-shadow: none; }
-    }
-
-    /* ── MOBILE ── */
-    @media (max-width: 680px) {
-      .page { margin: 0; border-radius: 0; border-left: none; border-right: none; }
-      .cv-header { padding: 2rem 1.5rem 1.8rem; }
-      .cv-body { grid-template-columns: 1fr; }
-      .cv-main { padding: 2rem 1.5rem; border-right: none; border-bottom: 1px solid var(--line); }
-      .cv-side { padding: 2rem 1.5rem; }
-      .exp-top { flex-direction: column; gap: .1rem; }
-      .proj-top { flex-direction: column; gap: .3rem; }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 
@@ -319,7 +18,7 @@
     <div class="cv-name">Sahu Asiel</div>
     <div class="cv-title">Full Stack Developer &nbsp;·&nbsp; Embedded Systems &nbsp;·&nbsp; Computer Vision</div>
     <div class="cv-meta">
-      <a href="mailto:sahu0408asiel@gmail.com" class="ico">✉</a>
+      <span class="ico">✉</span>
       <a href="mailto:sahu0408asiel@gmail.com">sahu0408asiel@gmail.com</a>
 
       <span class="ico">📍</span>
@@ -329,10 +28,10 @@
       <a href="https://github.com/sahumm" target="_blank">github.com/sahumm</a>
 
       <a href="https://bitplasm.vercel.app/" target="_blank" class="ico">🔗</a>
-      <a href="https://bitplasm.vercel.app/" target="_blank">https://bitplasm.vercel.app/</a>
+      <a href="https://bitplasm.vercel.app/" target="_blank">bitplasm.vercel.app</a>
 
       <span class="ico">💼</span>
-      <span>LinkedIn: <a href="https://linkedin.com/in/" target="_blank">www.linkedin.com/in/sahu-asiel-muñoz-montoya-64220b372</a></span>
+      <span>LinkedIn: <a href="https://linkedin.com/in/sahu-asiel-muñoz-montoya-64220b372" target="_blank">linkedin.com/in/sahu-asiel-muñoz-montoya-64220b372</a></span>
     </div>
     <div class="badge-remote"><div class="badge-dot"></div> Disponible para trabajo remoto</div>
   </header>
@@ -347,7 +46,7 @@
       <section class="cv-section">
         <div class="section-label">Resumen</div>
         <p class="summary">
-          Desarrollador Full Stack y emprendedor con experiencia en desarrollo web, sistemas embebidos, automatización y visión por computadora. Freelancer de <strong>BitPlasma Sudio</strong>, donde ofrezco servicios de desarrollo a clientes locales. Me caracterizo por aprender de forma autodidacta, construir soluciones completas de principio a fin y por enfrentar problemas técnicos complejos en entornos reales.
+          Desarrollador Full Stack y emprendedor con experiencia en desarrollo web, sistemas embebidos, automatización y visión por computadora. Freelancer de <strong>BitPlasma Studio</strong>, donde ofrezco servicios de desarrollo a clientes locales. Me caracterizo por aprender de forma autodidacta, construir soluciones completas de principio a fin y por enfrentar problemas técnicos complejos en entornos reales.
         </p>
       </section>
 
@@ -396,7 +95,7 @@
             <li>Diseño y construcción completa de lentes inteligentes de asistencia para personas con discapacidad visual.</li>
             <li>Integración de sensores ultrasónicos, motores de vibración y visión por computadora (YOLOv8n) sobre hardware embebido.</li>
             <li>Firmware en C++ con arquitectura non-blocking usando <code style="font-family:'JetBrains Mono',monospace;font-size:.8em">millis()</code>.</li>
-            <li><strong>3er lugar en competencia estatal</strong>
+            <li><strong>3er lugar en competencia estatal</strong></li>
           </ul>
         </div>
       </section>
@@ -436,7 +135,7 @@
 
         <div class="proj-item">
           <div class="proj-top">
-            <div class="proj-name">BitPlasm Studio — Demos de clientes</div>
+            <div class="proj-name">BitPlasma Studio — Demos de clientes</div>
             <span class="proj-status s-prod">En producción</span>
           </div>
           <div class="proj-desc">
@@ -450,7 +149,7 @@
 
         <div class="proj-item">
           <div class="proj-top">
-            <div class="proj-name">Voice Commander — App de reconocimiento de voz</div>
+            <div class="proj-name">App de comandos por voz</div>
             <span class="proj-status s-dev">En desarrollo</span>
           </div>
           <div class="proj-desc">
@@ -554,12 +253,14 @@
       <section class="side-section">
         <div class="section-label">Idiomas</div>
         <div class="lang-item"><span class="lang-name">Español</span><span class="lang-level">Nativo</span></div>
-        <div class="lang-item"><span class="lang-name">Inglés</span><span class="lang-level">Técnico / Lectura</span></div>
+        <div class="lang-item"><span class="lang-name">Inglés</span><span class="lang-level">Avanzado</span></div>
       </section>
 
     </aside>
-  </div>
-</div>
+  </div><!-- /.cv-body -->
 
+</div><!-- /.page -->
+
+<script src="script.js"></script>
 </body>
 </html>
