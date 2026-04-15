@@ -1,266 +1,330 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sahu Asiel — Full Stack Developer</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="style.css"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sahu Muñoz — Full Stack Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-<div class="page">
+  <!-- ─── NAVBAR ────────────────────────────────────────── -->
+  <nav>
+    <a href="NS.png" class="nav-logo">
+      <img src="NS.png" alt="Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'"/>
+      <span style="display:none; font-family:var(--font-head); font-weight:800; font-size:1.1rem; color:var(--violet); letter-spacing:-0.02em;">S/</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#about">sobre mí</a></li>
+      <li><a href="#contact">contacto</a></li>
+      <li><a href="#projects">proyectos</a></li>
+      <li><a href="#availability">disponibilidad</a></li>
+    </ul>
+  </nav>
 
-  <!-- ══ HEADER ══ -->
-  <header class="cv-header">
-    <div class="cv-name">Sahu Asiel</div>
-    <div class="cv-title">Full Stack Developer &nbsp;·&nbsp; Embedded Systems &nbsp;·&nbsp; Computer Vision</div>
-    <div class="cv-meta">
-      <span class="ico">✉</span>
-      <a href="mailto:sahu0408asiel@gmail.com">sahu0408asiel@gmail.com</a>
-
-      <span class="ico">📍</span>
-      <span>San Luis Potosí, México</span>
-
-      <a href="https://github.com/sahumm" target="_blank" class="ico">⌥</a>
-      <a href="https://github.com/sahumm" target="_blank">github.com/sahumm</a>
-
-      <a href="https://bitplasm.vercel.app/" target="_blank" class="ico">🔗</a>
-      <a href="https://bitplasm.vercel.app/" target="_blank">bitplasm.vercel.app</a>
-
-      <span class="ico">💼</span>
-      <span>LinkedIn: <a href="https://linkedin.com/in/sahu-asiel-muñoz-montoya-64220b372" target="_blank">linkedin.com/in/sahu-asiel-muñoz-montoya-64220b372</a></span>
+  <!-- ─── HEADER ────────────────────────────────────────── -->
+  <header>
+    <div class="bubbles-container" id="bubbles"></div>
+    <div class="header-content">
+      <h1 class="hero-name">Sahu Muñoz</h1>
+      <p class="hero-role">Full Stack Developer</p>
+      <div class="hero-cta">
+        <a href="#about" class="btn"><span>Más sobre mí</span></a>
+      </div>
     </div>
-    <div class="badge-remote"><div class="badge-dot"></div> Disponible para trabajo remoto</div>
   </header>
 
-  <!-- ══ BODY ══ -->
-  <div class="cv-body">
-
-    <!-- ── MAIN ── -->
-    <main class="cv-main">
-
-      <!-- RESUMEN -->
-      <section class="cv-section">
-        <div class="section-label">Resumen</div>
-        <p class="summary">
-          Desarrollador Full Stack y emprendedor con experiencia en desarrollo web, sistemas embebidos, automatización y visión por computadora. Freelancer de <strong>BitPlasma Studio</strong>, donde ofrezco servicios de desarrollo a clientes locales. Me caracterizo por aprender de forma autodidacta, construir soluciones completas de principio a fin y por enfrentar problemas técnicos complejos en entornos reales.
+  <!-- ─── ABOUT ─────────────────────────────────────────── -->
+  <section id="about">
+    <div class="reveal">
+      <p class="section-label">// 01 — sobre mí</p>
+      <h2 class="section-title">Código limpio.<br>Impacto directo.</h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p>
+          Soy <strong>desarrollador autodidacta</strong> con experiencia sólida en software y hardware. Desde firmware embebido hasta aplicaciones web completas, construyo sistemas de principio a fin sin atajos.
         </p>
-      </section>
+        <p>
+          Fundé <span class="accent">BitPlasma Studio</span> para llevar esa mentalidad al mercado freelance — ofreciendo desarrollo web, automatización y soluciones a medida para clientes reales, con resultados tangibles.
+        </p>
+        <p>
+          Me mueven los <strong>problemas difíciles</strong>: integrar visión por computadora con hardware embebido, construir arquitecturas que escalen, o escribir el firmware que nadie más quiere tocar. Si hay un problema técnico complejo, quiero ser quien lo resuelva.
+        </p>
+        <p>
+          Arquitectura pensada. Código documentado. Entrega que habla por sí sola.
+        </p>
+        <div class="skills-grid">
+          <span class="skill-tag">C / C++</span>
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">JavaScript</span>
+          <span class="skill-tag">HTML / CSS</span>
+          <span class="skill-tag">Arduino</span>
+          <span class="skill-tag">ATmega328P</span>
+          <span class="skill-tag">ESP32</span>
+          <span class="skill-tag">OpenCV</span>
+          <span class="skill-tag">MediaPipe</span>
+          <span class="skill-tag">YOLOv8</span>
+          <span class="skill-tag">Firebase</span>
+          <span class="skill-tag">Git / GitHub</span>
+          <span class="skill-tag">Linux</span>
+          <span class="skill-tag">PCB Design</span>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="about-card">
+          <h3>Mi trayectoria</h3>
+          <div class="stat-item">
+            <span class="stat-number">Nucleo</span>
+            <span class="stat-label">programación</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">3°</span>
+            <span class="stat-label">lugar estatal — Vibreyes</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">1</span>
+            <span class="stat-label">Freelancer</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">∞</span>
+            <span class="stat-label">café consumido depurando código</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="divider"></div>
 
-      <!-- EXPERIENCIA -->
-      <section class="cv-section">
-        <div class="section-label">Experiencia</div>
-
-        <div class="exp-item">
-          <div class="exp-top">
-            <div>
-              <div class="exp-role">Desarrollador de Software (Remoto)</div>
-              <div class="exp-company">Contratado vía networking en competencia tecnológica</div>
+  <!-- ─── CONTACTO ─────────────────────────────────────── -->
+  <div id="contact" style="background:var(--bg1);">
+    <section class="contact-inner" style="max-width:1100px; margin:0 auto; padding:6rem 2rem;">
+      <div class="reveal">
+        <p class="section-label">// 02 — contacto</p>
+        <h2 class="section-title">Hablemos.</h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-links reveal">
+          <a href="https://linkedin.com/in/sahu-munoz" target="_blank" rel="noopener" class="contact-link">
+            <div class="contact-icon li">in</div>
+            <div class="contact-meta">
+              <strong>LinkedIn</strong>
+              <span>Perfil profesional</span>
             </div>
-            <div class="exp-period">Presente</div>
-          </div>
-          <ul class="exp-bullets">
-            <li>Desarrollo de aplicaciones que integran inteligencia artificial con control de servomotores.<br>Además de control de voz, desarrollado con kotlin.</li>
-          </ul>
-        </div>
-
-        <div class="exp-item">
-          <div class="exp-top">
-            <div>
-              <div class="exp-role">Desarrollador</div>
-              <div class="exp-company"><strong>BitPlasma Studio</strong> — Freelance, San Luis Potosí</div>
+          </a>
+          <a href="https://bitplasm.vercel.app/" target="_blank" rel="noopener" class="contact-link">
+            <div class="contact-icon bp">✦</div>
+            <div class="contact-meta">
+              <strong>BitPlasma Studio</strong>
+              <span>Portafolio del negocio</span>
             </div>
-            <div class="exp-period">Presente</div>
-          </div>
-          <ul class="exp-bullets">
-            <li>Diseño y desarrollo de sitios web profesionales para clientes locales de distintas industrias (gastronomía, bienestar, electrónica, moda, deporte).</li>
-            <li>Implementación de chatbots, scripts de automatización y generadores de herramientas con Python.</li>
-            <li>Gestión completa del proyecto: propuesta, desarrollo, deploy en Netlify y entrega al cliente.</li>
-            <li>Portafolio activo y en crecimiento.</li>
-          </ul>
-        </div>
-
-        <div class="exp-item">
-          <div class="exp-top">
-            <div>
-              <div class="exp-role">Investigador & Desarrollador de Hardware/Software</div>
-              <div class="exp-company">Proyecto <strong>Vibreyes</strong> — Institución educativa, SLP</div>
+          </a>
+          <a href="mailto:sahu0408asiel@gmail.com" class="contact-link">
+            <div class="contact-icon em">@</div>
+            <div class="contact-meta">
+              <strong>Email directo</strong>
+              <span>sahu0408asiel@gmail.com</span>
             </div>
-            <div class="exp-period">2025 — Presente</div>
-          </div>
-          <ul class="exp-bullets">
-            <li>Diseño y construcción completa de lentes inteligentes de asistencia para personas con discapacidad visual.</li>
-            <li>Integración de sensores ultrasónicos, motores de vibración y visión por computadora (YOLOv8n) sobre hardware embebido.</li>
-            <li>Firmware en C++ con arquitectura non-blocking usando <code style="font-family:'JetBrains Mono',monospace;font-size:.8em">millis()</code>.</li>
-            <li><strong>3er lugar en competencia estatal</strong></li>
-          </ul>
+          </a>
         </div>
-      </section>
+        <form class="form reveal" onsubmit="handleForm(event)">
+          <input type="text" placeholder="Tu nombre" name="name" required />
+          <input type="email" placeholder="Tu correo" name="email" required />
+          <input type="text" placeholder="Asunto" name="subject" />
+          <textarea placeholder="Mensaje..." name="message" required></textarea>
+          <button type="submit" class="btn"><span>Enviar mensaje</span></button>
+        </form>
+      </div>
+    </section>
+  </div>
 
-      <!-- PROYECTOS -->
-      <section class="cv-section">
-        <div class="section-label">Proyectos destacados</div>
-
-        <div class="proj-item">
-          <div class="proj-top">
-            <div class="proj-name">Vibreyes — Lentes inteligentes de accesibilidad</div>
-            <span class="proj-status s-active">Activo</span>
-          </div>
-          <div class="proj-desc">
-            Sistema de asistencia para personas con discapacidad visual. Detecta obstáculos en tiempo real mediante sensores ultrasónicos y detección de objetos con YOLO; genera retroalimentación háptica mediante motores de vibración. Arquitectura embebida sin bloqueo, diseño de PCB propio y pipeline de visión por computadora con monocular depth estimation.
-          </div>
-          <div class="proj-award">🏆 3er lugar — Competencia estatal</div>
-          <div class="proj-stack">
-            <span class="tech">C++</span><span class="tech">Arduino</span><span class="tech">Python</span>
-            <span class="tech">YOLOv8n</span><span class="tech">OpenCV</span><span class="tech">KiCad</span>
-            <span class="tech">Raspberry Pi</span><span class="tech">HAILO-8L</span>
-          </div>
+  <!-- ─── PROYECTOS ─────────────────────────────────────── -->
+  <div id="projects" style="background:var(--bg2);">
+    <section class="projects-inner" style="max-width:1100px; margin:0 auto; padding:6rem 2rem;">
+      <div class="projects-header reveal">
+        <div>
+          <p class="section-label">// 03 — logros & proyectos</p>
+          <h2 class="section-title" style="margin-bottom:0;">Lo que he construido.</h2>
         </div>
+        <a href="https://github.com/sahumm" target="_blank" rel="noopener" class="btn btn-ghost">
+          <span>Aquí más →</span>
+        </a>
+      </div>
+      <div class="projects-grid">
 
-        <div class="proj-item">
-          <div class="proj-top">
-            <div class="proj-name">Sistema de asistencia biométrica</div>
-            <span class="proj-status s-prod">Completado</span>
-          </div>
-          <div class="proj-desc">
-            Sistema de control de asistencia que combina reconocimiento facial (OpenCV) con sensor de huella digital, integrado a un portal web de administración. Recibió reconocimiento institucional y fue evaluado para financiamiento externo.
-          </div>
-          <div class="proj-stack">
-            <span class="tech">Python</span><span class="tech">OpenCV</span><span class="tech">HTML/CSS/JS</span><span class="tech">Arduino</span>
+        <div class="project-card reveal">
+          <span class="project-badge badge-award">🏆 3er lugar estatal</span>
+          <h3>Vibreyes</h3>
+          <p>Dispositivo háptico para personas con discapacidad visual. Sensores ultrasónicos HC-SR04, motores de vibración y PCB custom con ATmega328P standalone. Arquitectura non-blocking de máquina de estados.</p>
+          <div class="project-tags">
+            <span class="project-tag">C++</span>
+            <span class="project-tag">Arduino</span>
+            <span class="project-tag">PCB Design</span>
+            <span class="project-tag">ATmega328P</span>
+            <span class="project-tag">Embebido</span>
           </div>
         </div>
 
-        <div class="proj-item">
-          <div class="proj-top">
-            <div class="proj-name">BitPlasma Studio — Demos de clientes</div>
-            <span class="proj-status s-prod">En producción</span>
-          </div>
-          <div class="proj-desc">
-            6 sitios web profesionales desarrollados para clientes reales: Ceniza Bakery, Maison Céleste, Mar Azul, Aurea Spa, Voltex Electronics y Stryde. Diseño responsive, UI personalizado, desplegados en Netlify.
-          </div>
-          <div class="proj-stack">
-            <span class="tech">HTML</span><span class="tech">CSS</span><span class="tech">JavaScript</span><span class="tech">Netlify</span>
-          </div>
-          <a href="https://nnexorast.netlify.app" target="_blank" class="proj-link">nnexorast.netlify.app →</a>
-        </div>
-
-        <div class="proj-item">
-          <div class="proj-top">
-            <div class="proj-name">App de comandos por voz</div>
-            <span class="proj-status s-dev">En desarrollo</span>
-          </div>
-          <div class="proj-desc">
-            Aplicación que reconoce comandos de voz en tiempo real y ejecuta acciones del sistema. Orientada a automatización de flujos de trabajo sin necesidad de interfaces táctiles.
-          </div>
-          <div class="proj-stack">
-            <span class="tech">Python</span><span class="tech">Speech Recognition</span><span class="tech">NLP</span>
-          </div>
-        </div>
-      </section>
-
-    </main>
-
-    <!-- ── SIDEBAR ── -->
-    <aside class="cv-side">
-
-      <!-- HABILIDADES TÉCNICAS -->
-      <section class="side-section">
-        <div class="section-label">Habilidades técnicas</div>
-
-        <div class="skill-group">
-          <div class="skill-group-label">Lenguajes</div>
-          <div class="skill-tags">
-            <span class="stag highlight">Python</span>
-            <span class="stag highlight">C++</span>
-            <span class="stag highlight">JavaScript</span>
-            <span class="stag">C</span>
-            <span class="stag">Rust</span>
-            <span class="stag">Kotlin</span>
-            <span class="stag">Y más</span>
+        <div class="project-card reveal">
+          <span class="project-badge badge-build">En desarrollo</span>
+          <h3>DeSaSTre</h3>
+          <p>Proyecto co-fundado con stack de visión por computadora, ESP32 y base de datos Firebase/MongoDB. Sistema inteligente de tiempo real.</p>
+          <div class="project-tags">
+            <span class="project-tag">ESP32</span>
+            <span class="project-tag">Python</span>
+            <span class="project-tag">Firebase</span>
+            <span class="project-tag">MongoDB</span>
           </div>
         </div>
 
-        <div class="skill-group">
-          <div class="skill-group-label">Web</div>
-          <div class="skill-tags">
-            <span class="stag">HTML5</span>
-            <span class="stag">CSS3</span>
-            <span class="stag">JavaScript ES6+</span>
-            <span class="stag">Diseño UI</span>
+        <div class="project-card reveal">
+          <span class="project-badge badge-award">Reconocimiento institucional</span>
+          <h3>Sistema Biométrico</h3>
+          <p>Control de asistencia con reconocimiento facial y huella digital, más portal web de administración. Evaluado para financiamiento institucional.</p>
+          <div class="project-tags">
+            <span class="project-tag">Python</span>
+            <span class="project-tag">OpenCV</span>
+            <span class="project-tag">Web Portal</span>
+            <span class="project-tag">Biometría</span>
           </div>
         </div>
 
-        <div class="skill-group">
-          <div class="skill-group-label">IA & Visión por computadora</div>
-          <div class="skill-tags">
-            <span class="stag">OpenCV</span>
-            <span class="stag">YOLOv8</span>
-            <span class="stag">MediaPipe</span>
-            <span class="stag">Monocular Depth</span>
-            <span class="stag">Edge AI</span>
+        <div class="project-card reveal">
+          <span class="project-badge badge-active">Freelance</span>
+          <h3>BitPlasma Studio</h3>
+          <p>Negocio freelance propio. Portfolio con 6+ sitios en producción para clientes locales, servicios de automatización, sistemas embebidos y desarrollo web.</p>
+          <div class="project-tags">
+            <span class="project-tag">HTML/CSS/JS</span>
+            <span class="project-tag">Netlify</span>
+            <span class="project-tag">Cloudflare</span>
+            <span class="project-tag">Branding</span>
           </div>
         </div>
 
-        <div class="skill-group">
-          <div class="skill-group-label">Hardware & Embebidos</div>
-          <div class="skill-tags">
-            <span class="stag">Arduino</span>
-            <span class="stag">Raspberry Pi</span>
-            <span class="stag">KiCad</span>
-            <span class="stag">HC-SR04</span>
-            <span class="stag">Servomotores</span>
+        <div class="project-card reveal">
+          <span class="project-badge badge-build">Hobby</span>
+          <h3>Progreso Anual</h3>
+          <p>Primer proyecto web — barra de progreso del año. Construido por frustración ante una cuenta de Instagram que cobraba algo trivialmente replicable.</p>
+          <div class="project-tags">
+            <span class="project-tag">HTML</span>
+            <span class="project-tag">CSS</span>
+            <span class="project-tag">JavaScript</span>
           </div>
         </div>
 
-        <div class="skill-group">
-          <div class="skill-group-label">Herramientas</div>
-          <div class="skill-tags">
-            <span class="stag">Git / GitHub</span>
-            <span class="stag">Linux / Fedora</span>
-            <span class="stag">Netlify</span>
-            <span class="stag">VS Code</span>
-            <span class="stag">GCC</span>
-            <span class="stag">Cargo</span>
-          </div>
+        <div class="project-card reveal">
+          <span class="project-badge badge-active">Activo</span>
+          <h3>Conoce más de mis proyectos</h3>
+          <p>Conoce más de sobre mis proyectos pasados y presentes en mi github (no lo subo todo, pero encontraras algunos ahí).</p>
+          <a href="https://github.com/sahumm" target="_blank" rel="noopener" class="btn btn-ghost">
+          <span>Mi github →</span>
+          </a>
         </div>
-      </section>
 
-      <!-- LOGROS -->
-      <section class="side-section">
-        <div class="section-label">Logros</div>
-        <div class="ach-item">
-          <div class="ach-icon">🥉</div>
-          <div class="ach-text"><strong>3er lugar estatal</strong> — Competencia de tecnología con proyecto Vibreyes. Clasificado a fase nacional.</div>
-        </div>
-        <div class="ach-item">
-          <div class="ach-icon">🌐</div>
-          <div class="ach-text"><strong>Trabajo remoto</strong> obtenido por networking en competencia — desarrollo de apps con IA.</div>
-        </div>
-        <div class="ach-item">
-          <div class="ach-icon">🏛️</div>
-          <div class="ach-text"><strong>Reconocimiento institucional</strong> por sistema biométrico; evaluado para financiamiento externo.</div>
-        </div>
-        <div class="ach-item">
-          <div class="ach-icon">🚀</div>
-          <div class="ach-text">Fundador de <strong>BitPlasma Studio</strong> con 6+ clientes activos desde preparatoria.</div>
-        </div>
-      </section>
+      </div>
+    </section>
+  </div>
 
-      <!-- IDIOMAS -->
-      <section class="side-section">
-        <div class="section-label">Idiomas</div>
-        <div class="lang-item"><span class="lang-name">Español</span><span class="lang-level">Nativo</span></div>
-        <div class="lang-item"><span class="lang-name">Inglés</span><span class="lang-level">Avanzado</span></div>
-      </section>
+  <!-- ─── DISPONIBILIDAD ────────────────────────────────── -->
+  <div id="availability" style="background:var(--bg0);">
+    <section class="availability-inner" style="padding:6rem 2rem; max-width:900px; margin:0 auto; text-align:center;">
+      <div class="avail-badge reveal">
+        <span class="avail-dot"></span>
+        Disponible para trabajo remoto
+      </div>
+      <h2 class="avail-title reveal">
+        Buscando mi próximo<br><span class="grad">reto remoto.</span>
+      </h2>
+      <p class="avail-desc reveal">
+        Busco una posición como <strong>desarrollador web remoto</strong> donde pueda aportar desde el día uno. Soy rápido aprendiendo, trabajo bien de forma independiente y sé entregar código que funciona en entornos reales — no solo en localhost.
+      </p>
+      <div class="avail-chips reveal">
+        <span class="avail-chip">Tiempo completo</span>
+        <span class="avail-chip">Medio tiempo</span>
+        <span class="avail-chip">Freelance</span>
+        <span class="avail-chip">Remoto · Global</span>
+        <span class="avail-chip">Desde SLP, México</span>
+      </div>
+      <div class="avail-cta reveal">
+        <a href="mailto:sahu0408asiel@gmail.com" class="btn btn-cyan"><span>Contáctame</span></a>
+        <a href="#projects" class="btn btn-ghost"><span>Ver proyectos</span></a>
+      </div>
+    </section>
+  </div>
 
-    </aside>
-  </div><!-- /.cv-body -->
+  <!-- ─── FOOTER ────────────────────────────────────────── -->
+  <footer>
+    <p>Construido con <span>♥</span> y demasiado café — <span>Sahu Muñoz</span> © 2025</p>
+  </footer>
 
-</div><!-- /.page -->
+  <!-- ─── SCRIPTS ───────────────────────────────────────── -->
+  <script>
+    /* Burbujas */
+    (function(){
+      const container = document.getElementById('bubbles');
+      const colors = [
+        'rgba(155,92,255,0.18)',
+        'rgba(0,212,255,0.15)',
+        'rgba(224,64,251,0.12)',
+        'rgba(155,92,255,0.08)',
+        'rgba(0,212,255,0.08)',
+      ];
+      const count = 22;
+      for (let i = 0; i < count; i++) {
+        const b = document.createElement('div');
+        b.classList.add('bubble');
+        const size   = Math.random() * 60 + 14;
+        const left   = Math.random() * 100;
+        const delay  = Math.random() * 12;
+        const dur    = Math.random() * 14 + 10;
+        const color  = colors[Math.floor(Math.random() * colors.length)];
+        const border = Math.random() > 0.5
+          ? `1px solid ${color.replace(/[\d.]+\)$/, '0.35)')}`
+          : 'none';
+        b.style.cssText = `
+          width:${size}px; height:${size}px;
+          left:${left}%;
+          background:${color};
+          border:${border};
+          animation-duration:${dur}s;
+          animation-delay:${delay}s;
+          filter: blur(${Math.random()*1.5}px);
+        `;
+        container.appendChild(b);
+      }
+    })();
 
-<script src="script.js"></script>
+    /* Scroll reveal */
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -30px 0px' });
+
+    document.querySelectorAll('.reveal').forEach((el, i) => {
+      el.style.transitionDelay = (i % 3) * 0.08 + 's';
+      observer.observe(el);
+    });
+
+    /* Formulario */
+    function handleForm(e) {
+      e.preventDefault();
+      const form = e.target;
+      const btn = form.querySelector('button');
+      const name = form.name.value;
+      const email = form.email.value;
+      const subject = form.subject.value || 'Contacto desde portafolio';
+      const message = form.message.value;
+      const mailto = `mailto:sahu0408asiel@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Nombre: ${name}\nEmail: ${email}\n\n${message}`)}`;
+      window.location.href = mailto;
+      btn.querySelector('span').textContent = '✓ Enviando...';
+      setTimeout(() => btn.querySelector('span').textContent = 'Enviar mensaje', 3000);
+    }
+  </script>
 </body>
 </html>
